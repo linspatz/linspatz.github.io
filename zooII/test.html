@@ -1,1 +1,86 @@
-tt
+
+<!-- Incremental Zoo 0.44
+by Eduardo Abel Gimenez (ximenez2.blogspot.com)
+-->
+
+<!-- Photo credits: Except where noted, all photos were published by their authorsunder a Creative Commons "by" license (creativecommons.org/licenses/by/2.0/). Meerkat, Neil McIntosh. Peackock, public domain (Wikimedia Commons). Chameleon, William Warby. Beaver, dcJohn. Flamingos, Pedro Szekely. Otter, Michael Malz. Penguin, Paul Boxley. Snake, Linda Tanner. Turtle, Julien GONG Min. Tapir, NAPARAZZI. Crocodile, Radek Vitoul. Monkey, Michael Goodine. Seal, Yuri Levchenko. Anteater, cuatrok77. Kangaroo, Scott Calleja. Eagle, Pat Bell. Okapi, Trisha Shears. Ostrich, William Warby. Antelope, Alfo23. Zebra, Martin Pettitt. Condor, USFWS Pacific Southwest Region. Wolf, Alois Staudacher. Jaguar, Alois Staudacher. Bear, Moyan Brenn. Hippo, William Warby. Tiger, Alois Staudacher. Giraffe, Alois Staudacher. Shark, Ed Schipul. Rhino, macinate. Gorilla, Ruben Undheim. Lion, Peter Harrison. Elephant, Arran ET. Panda, George Lu, Dolphin, Gordon Wrigley. Orca, Opals-On-Black.com. (All from flickr.com, except for peacock.) -->
+
+
+<!DOCTYPE html>
+<head><script src="//archive.org/includes/analytics.js?v=cf34f82" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app57.us.archive.org';v.server_ms=1573;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="/_static/js/ait-client-rewrite.js" charset="utf-8"></script>
+<script type="text/javascript">
+WB_wombat_Init("https://web.archive.org/web/", "20171201161438", "magicaweb.com:80");
+</script>
+<script type="text/javascript" src="/_static/js/wbhack.js" charset="utf-8"></script>
+<script type="text/javascript">
+__wbhack.init('https://web.archive.org/web');
+</script>
+<link rel="stylesheet" type="text/css" href="/_static/css/banner-styles.css" />
+<link rel="stylesheet" type="text/css" href="/_static/css/iconochive.css" />
+<!-- End Wayback Rewrite JS Include -->
+
+<title id="title">Incremental Zoo</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link rel="Shortcut Icon" href="/web/20171201161438im_/https://magicaweb.com/zooII/favicon.ico">
+<link href="/web/20171201161438cs_/https://magicaweb.com/zooII/zoo.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div class="container">
+	<div id="left">
+		<div id="money">
+			<p><strong>You Have</strong>
+			<h2 id="have" class="buttonLike">$0.00</h2><br>
+			<div class="money borrow" onmousedown="IZ.moneyClick(10)">Borrow<br>$10</div>
+			<div class="money borrow" onmousedown="IZ.moneyClick(1000)">Borrow<br>$1,000</div>
+			<div class="money borrow" onmousedown="IZ.moneyClick('max')">Borrow<br>Max</div>
+		</div>
+		<div id="debt">
+			<h3 id="limit">Credit Limit: 50</h3>
+			<div class="money payBack" onmousedown="IZ.debtClick(10)">Pay<br>$10</div>
+			<div class="money payBack" onmousedown="IZ.debtClick(1000)">Pay<br>$1,000</div>
+			<div class="money payBack" onmousedown="IZ.debtClick('max')">Pay<br>Max</div><br>
+			<h2 id="owe" class="buttonLike">$0.00</h2>
+			<p><strong>You Owe</strong>
+		</div>
+		<hr/>
+		<div id="stats" class="options" onmousedown="IZ.createStats()">Stats</div>
+		<div id="export" class="options" onmousedown="IZ.exportSave()">Export</div>
+		<div id="import" class="options" onmousedown="IZ.importSave()">Import</div>
+		<div id="reset" class="options" onmousedown="IZ.reset()">Reset</div>
+		<hr/>
+		<div id="offerContainer">
+			<div id="offerTitle"><h3>The Incremental Office<br>For Animal Exchange<br>offers:</h3></div>
+			<div id="offer"><h2>Get x<br>in exchange for<br>y</h2></div>
+			<br>
+			<div id="offerNo" onmousedown="IZ.offerRejected()">No, thanks</div>
+			<div id="offerYes" onmousedown="IZ.offerAccepted()">I accept</div>
+		</div>
+		<div id="exportContainer"></div>
+		<div id="fineContainer"></div>
+		<div id="log"></div>
+	</div>
+	<div id="title">
+		<img src="/web/20171201161438im_/https://magicaweb.com/zooII/incremental_zoo_resize.png" alt="Incremental Zoo, an Idle Game by Ximenez" title="Incremental Zoo, an Idle Game by Ximenez"/>
+		<h3 id="what" onmousedown="IZ.hideWhat()">Borrow money. Buy animals, at least two of each species. Wait for them to breed. Sell some. Buy other animals. Pay back your debt before the cumulative interest gets too high. Be patient. Get badges. Reset after a while to get a special bonus. (Click this to hide it.)</h3>
+	</div>
+
+    <div id="animalsContainer">Loading...</div>
+	</div>
+
+<script type="text/javascript" src="/web/20171201161438js_/https://magicaweb.com/zooII/zoo.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//web.archive.org/web/20171201161438/https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-110941-4', 'magicaweb.com');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
